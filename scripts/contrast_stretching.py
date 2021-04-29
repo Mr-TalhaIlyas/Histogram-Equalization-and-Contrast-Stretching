@@ -22,3 +22,16 @@ img = cv2.LUT(img, table)
 
 plt.imshow(img)
 plt.title('Contrast Stretched Image')
+
+
+def contrast_stretching(z, a, b, z1, zk):
+
+    new_array = np.copy(z)
+        
+    for i,value in enumerate(z):
+        if value>=a and value<=b:
+            new_pixel_value = (((zk - z1)/(b-a))*value) + ((z1*b - zk*a)/(b-a))
+
+            new_array[i] = new_pixel_value
+
+    return new_array
