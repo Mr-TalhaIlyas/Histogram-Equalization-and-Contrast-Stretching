@@ -23,7 +23,7 @@ img = cv2.LUT(img, table)
 plt.imshow(img)
 plt.title('Contrast Stretched Image')
 
-
+# from shujaat
 def contrast_stretching(z, a, b, z1, zk):
 
     new_array = np.copy(z)
